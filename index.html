@@ -120,17 +120,40 @@ header h1{font-size:clamp(40px,4.4vw,60px)}
 .steps button{font:inherit;color:inherit;text-align:left;cursor:pointer;width:100%;background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:12px 14px;display:flex;gap:10px;align-items:center;font-size:13.5px;box-shadow:0 4px 14px #7a141014;transition:transform .15s}
 .steps button::after{content:"›";margin-left:auto;font-size:24px;line-height:1;color:var(--pri)}
 .steps button:hover{transform:translateY(-2px)}.steps button:active{transform:scale(.97)}
+.acts{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;max-width:580px;margin:14px auto 0}
+.acts a,.acts button{font:inherit;font-weight:600;font-size:14px;color:#fff;text-decoration:none;text-align:center;cursor:pointer;padding:10px 8px;border-radius:24px;background:#ffffff1f;border:1px solid #ffd36b88;backdrop-filter:blur(6px)}
+.acts a:active,.acts button:active{transform:scale(.96)}
+.adr{margin:12px auto 0;font-size:13px;color:#ffd9a0;max-width:520px}
+.sr{display:flex;gap:8px;max-width:600px;margin:0 auto 8px;align-items:center}
+.sr input{margin:0;flex:1;min-width:0;max-width:none}
+.ic{flex:none;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-size:20px;text-decoration:none;box-shadow:0 2px 8px #0003}
+.ic.wa{background:#25a244}.ic.cl{background:linear-gradient(135deg,var(--acc),var(--pri))}
+.qfw{max-width:1280px;margin:10px auto 0;padding:0 12px}
+.qf a{font-weight:600}.qf a.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+#nf{display:none;text-align:center;padding:36px 16px;color:var(--mut)}
+.bg{position:absolute;top:8px;right:8px;font-size:11px;font-weight:700;padding:2px 9px;border-radius:10px}
+.bg.pop{background:#ffb300;color:#3a2200}.bg.new{background:#00c853;color:#fff}
+.it .n{padding-right:64px}
+.pg{position:absolute;left:18px;right:18px;top:0;height:4px;border-radius:4px;background:#ffffff30;overflow:hidden}
+.pg i{display:block;height:100%;width:0;background:linear-gradient(90deg,#ffc94d,#00e676);transition:width .3s}
+.cart>div:first-of-type+div{min-width:0}.cart span{white-space:nowrap}
+footer a{color:inherit;font-weight:600}
+@media(max-width:420px){header h1{font-size:25px}.ct{gap:8px}.ct a{padding:6px 14px 6px 6px}.ct b{font-size:16px}.steps{gap:8px}.cart{left:6px;right:6px;padding-left:14px}.btn{padding:10px 16px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style></head><body>
 <header><canvas id="fw"></canvas><i class="moon"></i><span class="bd">DIWALI 2026</span><h1>DASS &amp; CO PATTAS FACTORY</h1><p>Price List 2026 · Select your crackers and send an estimate enquiry</p>
 <div class="tag" id="tg"></div>
 <div class="ct"><a href="tel:+919894813087"><i>📞</i><span><small>ShivaShanker</small><b>98948 13087</b></span></a><a href="tel:+919994458913"><i>📞</i><span><small>NandhaKumar</small><b>99944 58913</b></span></a></div>
+<div class="acts"><a href="tel:+919894813087">📞 Call now</a><a href="https://wa.me/919894813087?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20crackers" target="_blank" rel="noopener">💬 WhatsApp</a><a href="https://maps.app.goo.gl/dS72fQE4fPXmqegj8" target="_blank" rel="noopener">📍 Find us</a><button type="button" id="shr">📤 Share</button></div>
+<p class="adr">📍 Near MS Mahal, Opposite to Ayyangar bakery, Kurumbapalayam</p>
 <div class="dy"><i></i><i></i><i></i></div></header>
 <div class="steps"><button type="button" data-go="list"><b>1</b>Choose your crackers</button><button type="button" data-go="est"><b>2</b>Get your estimate</button><button type="button" data-go="call"><b>3</b>We confirm by phone</button></div>
-<div class="bar"><input id="s" type="search" placeholder="Search crackers…"><nav class="chips" id="chips"></nav></div>
+<div class="bar"><div class="sr"><input id="s" type="search" placeholder="Search crackers…"><a class="ic wa" href="https://wa.me/919894813087?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20crackers" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a><a class="ic cl" href="tel:+919894813087" aria-label="Call now">📞</a></div><nav class="chips" id="chips"></nav></div>
+<div class="qfw"><div class="chips qf" id="qf"></div></div>
 <main id="app"></main>
-<footer>As per the 2018 Supreme Court order, online sale of firecrackers is not permitted. Choose your products to build an estimate and submit it as an enquiry; we will contact you by phone to confirm. Prices are in ₹ as per the 2026 price list and are subject to change. Add your licence details here.</footer>
-<div class="cart"><div><span id="cnt">0 items</span><b id="tot">₹0</b></div><button class="btn" id="go">Get Estimate</button></div>
+<div id="nf">No crackers match. Try another filter or search.</div>
+<footer><b>DASS &amp; CO PATTAS FACTORY</b><br>📍 Near MS Mahal, Opposite to Ayyangar bakery, Kurumbapalayam · <a href="https://maps.app.goo.gl/dS72fQE4fPXmqegj8" target="_blank" rel="noopener">Open in Google Maps</a><br>📞 <a href="tel:+919894813087">98948 13087</a> · <a href="tel:+919994458913">99944 58913</a><br><br>As per the 2018 Supreme Court order, online sale of firecrackers is not permitted. Choose your products to build an estimate and submit it as an enquiry; we will contact you by phone to confirm. Prices are in ₹ as per the 2026 price list and are subject to change.</footer>
+<div class="cart"><div class="pg"><i id="pgb"></i></div><div><span id="cnt">0 items</span><b id="tot">₹0</b></div><button class="btn" id="go">Get Estimate</button></div>
 <dialog id="dlg"><h3 style="margin:0">Your estimate</h3><div class="ol" id="ol"></div>
 <div style="display:flex;justify-content:space-between"><b>Total</b><b id="dt"></b></div>
 <input id="nm" placeholder="Your name"><input id="ph" placeholder="Phone number" inputmode="tel"><input id="ad" placeholder="City / delivery address">
@@ -138,6 +161,7 @@ header h1{font-size:clamp(40px,4.4vw,60px)}
 <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:8px"><button class="btn" style="background:var(--bd)" id="cl">Close</button><button class="btn" id="send">Send on WhatsApp</button></div></dialog>
 <script>
 const WHATSAPP="919894813087"; // WhatsApp number (country code + number, no +)
+const SHEET_URL="https://script.google.com/macros/s/AKfycbw2g8JhMGRFuEnrKYF_YtNQ2ioBHJfYygX0_6q_mAGd9GfzqbOX_dl7-A5qJhQc2_OQ/exec"; // Google Apps Script web app that logs orders in Google Sheets
 const MIN=500;                 // minimum order amount in ₹ (set 0 to disable)
 const U={B:"Box",P:"Pkt",C:"Pc",D:"Bundle"};
 const D=[
@@ -159,6 +183,9 @@ const D=[
 ["Bundles",[["Kuruvi Bundle (25 Pkt, 125 pieces)","D",250],["Lakshmi Bundle (10 Pkts)","D",300]]]
 ];
 const E=["✨","🌀","🌸","⭐","💥","🧨","🚀","🎇","🎆","🏮","🎊","🦚","🎈","🔫","🎁","📦"];
+const POP=["Bambaram","Cylinder Bomb","KGF Hand Rocket (288 shots)","Helicopter","Roll Gun (LEO Gun)"],NEW=["Disco Shower","Bullet Bomb"];
+const TAG=n=>POP.includes(n)?"pop":(NEW.includes(n)||/^6" Fancy/.test(n))?"new":"";
+const BG=n=>{const t=TAG(n);return t?`<span class="bg ${t}">${t=="pop"?"⭐ Popular":"🆕 New"}</span>`:""};
 const qty={},app=document.getElementById("app"),chips=document.getElementById("chips");
 const inr=n=>"₹"+n.toLocaleString("en-IN");
 let n=0;const items=[];
@@ -166,18 +193,31 @@ D.forEach(([c,l],ci)=>{
  chips.insertAdjacentHTML("beforeend",`<a href="#c${ci}">${E[ci]} ${c}</a>`);
  let h=`<section data-c><h2 id="c${ci}"><i>${E[ci]}</i>${c}</h2><div class="grid">`;
  l.forEach(([nm,u,p])=>{n++;const id=n;items.push({id,nm,u,p});
-  h+=`<div class="it" id="i${id}" data-n="${nm.toLowerCase()}"><div class="no">#${id}</div><div class="n">${nm}</div><div class="row">`+
+  h+=`<div class="it" id="i${id}" data-n="${nm.toLowerCase()}" data-p="${p==null?-1:p}" data-t="${TAG(nm)}" data-k="${ci}">${BG(nm)}<div class="no">#${id}</div><div class="n">${nm}</div><div class="row">`+
   (p==null?`<span class="na">Ask for price</span>`:`<div class="pr">${inr(p)} <small>/ ${U[u]}</small></div><div class="q"><button data-d="-1" data-i="${id}" aria-label="Less">−</button><input data-i="${id}" value="0" inputmode="numeric"><button data-d="1" data-i="${id}" aria-label="More">+</button></div>`)+`</div></div>`});
  app.insertAdjacentHTML("beforeend",h+"</div></section>");
 });
 function upd(){let t=0,c=0;items.forEach(x=>{const q=qty[x.id]||0;if(q){t+=q*x.p;c++}
  const el=document.getElementById("i"+x.id);el.classList.toggle("on",q>0);const i=el.querySelector("input");if(i&&document.activeElement!==i)i.value=q});
- document.getElementById("tot").textContent=inr(t);document.getElementById("cnt").textContent=c+(c==1?" item":" items");return t}
+ document.getElementById("tot").textContent=inr(t);document.getElementById("cnt").textContent=c+(c==1?" item":" items")+" · "+(t==0?"Min. order ₹"+MIN:t<MIN?"Add ₹"+(MIN-t)+" more":"Ready to order ✓");document.getElementById("pgb").style.width=(MIN?Math.min(100,t/MIN*100):(t?100:0))+"%";return t}
 function set(id,v){qty[id]=Math.max(0,Math.min(9999,v|0));upd();[document.getElementById("tot"),document.querySelector("#i"+id+" .pr")].forEach(el=>{el.classList.remove("pop");void el.offsetWidth;el.classList.add("pop")})}
 app.addEventListener("click",e=>{const b=e.target.closest("button");if(b)set(+b.dataset.i,(qty[b.dataset.i]||0)+ +b.dataset.d)});
 app.addEventListener("input",e=>{if(e.target.dataset.i)set(+e.target.dataset.i,parseInt(e.target.value)||0)});
-document.getElementById("s").addEventListener("input",e=>{const v=e.target.value.trim().toLowerCase();
- document.querySelectorAll("[data-c]").forEach(s=>{let any=false;s.querySelectorAll(".it").forEach(i=>{const m=!v||i.dataset.n.includes(v);i.style.display=m?"":"none";any=any||m});s.style.display=any?"":"none"})});
+let F="all";
+const QF=[["all","All"],["pop","⭐ Popular"],["new","🆕 New"],["u100","Under ₹100"],["m500","₹100–₹500"],["a500","Above ₹500"],["k12","🎈 Kids"],["k14","🎁 Gift Boxes"],["k15","📦 Bundles"]],qf=document.getElementById("qf");
+const syncQF=()=>qf.innerHTML=QF.map(([k,l])=>`<a href="#" role="button" data-f="${k}" class="${k==F?"on":""}">${l}</a>`).join("");
+function applyF(){const v=document.getElementById("s").value.trim().toLowerCase();let n=0;
+ document.querySelectorAll("[data-c]").forEach(sec=>{let any=false;sec.querySelectorAll(".it").forEach(i=>{const d=i.dataset,p=+d.p;
+  const f=F=="all"||(F=="pop"||F=="new"?d.t==F:F=="u100"?p>=0&&p<100:F=="m500"?p>=100&&p<=500:F=="a500"?p>500:d.k==F.slice(1));
+  const m=f&&(!v||d.n.includes(v));i.style.display=m?"":"none";any=any||m;if(m)n++});sec.style.display=any?"":"none"});
+ document.getElementById("nf").style.display=n?"none":"block"}
+syncQF();
+qf.addEventListener("click",e=>{const a=e.target.closest("a");if(!a)return;e.preventDefault();F=a.dataset.f;syncQF();applyF()});
+chips.addEventListener("click",()=>{if(F!="all"){F="all";syncQF();applyF()}});
+document.getElementById("s").addEventListener("input",applyF);
+document.getElementById("shr").onclick=async()=>{const u=location.href.split("#")[0],t="Dass & Co Pattas Factory – Diwali 2026 crackers price list. Choose your crackers and send an enquiry:";
+ try{if(navigator.share){await navigator.share({title:"Dass & Co Pattas Factory",text:t,url:u});return}}catch(e){if(e&&e.name=="AbortError")return}
+ window.open("https://wa.me/?text="+encodeURIComponent(t+" "+u),"_blank")};
 const dlg=document.getElementById("dlg"),wn=document.getElementById("wn");
 function lines(){return items.filter(x=>qty[x.id]).map(x=>({x,q:qty[x.id],a:qty[x.id]*x.p}))}
 document.getElementById("go").onclick=()=>{const L=lines(),t=upd();
@@ -188,7 +228,9 @@ document.getElementById("send").onclick=()=>{const L=lines(),t=upd(),nm=document
  if(!L.length){wn.textContent="Please add at least one item.";return}
  if(t<MIN){wn.textContent=`Minimum order amount is ${inr(MIN)}. Your total is ${inr(t)}.`;return}
  if(!nm||!ph){wn.textContent="Please enter your name and phone number.";return}
- const m=`Estimate enquiry – Dass & Co Pattas Factory\nName: ${nm}\nPhone: ${ph}\nAddress: ${document.getElementById("ad").value.trim()}\n\n`+
+ const d0=new Date(),z=x=>String(x).padStart(2,"0"),oid="DC-"+String(d0.getFullYear()).slice(2)+z(d0.getMonth()+1)+z(d0.getDate())+"-"+z(d0.getHours())+z(d0.getMinutes())+(Math.floor(Math.random()*90)+10),ad=document.getElementById("ad").value.trim();
+ if(SHEET_URL)try{fetch(SHEET_URL,{method:"POST",mode:"no-cors",keepalive:true,headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({id:oid,name:nm,phone:ph,address:ad,items:L.map(r=>r.x.nm+" x"+r.q+" "+U[r.x.u]).join("; "),count:L.length,total:t})}).catch(()=>{})}catch(e){}
+ const m=`Estimate enquiry – Dass & Co Pattas Factory\nOrder ID: ${oid}\nName: ${nm}\nPhone: ${ph}\nAddress: ${ad}\n\n`+
   L.map((r,i)=>`${i+1}. ${r.x.nm} × ${r.q} ${U[r.x.u]} = ${inr(r.a)}`).join("\n")+`\n\nTotal: ${inr(t)}`;
  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(m)}`,"_blank")};
 upd();
