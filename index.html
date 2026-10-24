@@ -139,12 +139,26 @@ header h1{font-size:clamp(40px,4.4vw,60px)}
 .cart>div:first-of-type+div{min-width:0}.cart span{white-space:nowrap}
 footer a{color:inherit;font-weight:600}
 @media(max-width:420px){header h1{font-size:25px}.ct{gap:8px}.ct a{padding:6px 14px 6px 6px}.ct b{font-size:16px}.steps{gap:8px}.cart{left:6px;right:6px;padding-left:14px}.btn{padding:10px 16px}}
+.acts{gap:10px;max-width:600px}
+.acts .ab{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:9px;padding:9px 14px 9px 9px;border:0;border-radius:30px;color:#fff;font-weight:700;font-size:14.5px;letter-spacing:.2px;box-shadow:0 6px 16px #0005,inset 0 1px 0 #ffffff55;backdrop-filter:none;transition:transform .15s,box-shadow .15s}
+.acts .ab i{font-style:normal;display:grid;place-items:center;width:32px;height:32px;flex:none;border-radius:50%;background:#fff;font-size:17px;box-shadow:0 2px 6px #0003}
+.acts .c1{background:linear-gradient(135deg,#ff8a00,#e52e71)}
+.acts .c2{background:linear-gradient(135deg,#25d366,#128c4a)}
+.acts .c3{background:linear-gradient(135deg,#00b4ff,#3a47d5)}
+.acts .c4{background:linear-gradient(135deg,#c471f5,#fa71cd)}
+.acts .ab::after{content:"";position:absolute;top:0;left:-70%;width:40%;height:100%;background:linear-gradient(100deg,transparent,#ffffff66,transparent);transform:skewX(-20deg);animation:shn 3.6s ease-in-out infinite}
+.acts .c2::after{animation-delay:.9s}.acts .c3::after{animation-delay:1.8s}.acts .c4::after{animation-delay:2.7s}
+@keyframes shn{0%,60%{left:-70%}100%{left:130%}}
+.acts .c1 i{animation:rng 1.8s ease-in-out infinite}
+@keyframes rng{0%,60%,100%{transform:rotate(0)}10%,30%{transform:rotate(-16deg)}20%,40%{transform:rotate(16deg)}}
+.acts .ab:hover{transform:translateY(-3px);box-shadow:0 10px 22px #0006,inset 0 1px 0 #ffffff55}
+.acts .ab:active{transform:scale(.96)}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style></head><body>
 <header><canvas id="fw"></canvas><i class="moon"></i><span class="bd">DIWALI 2026</span><h1>DASS &amp; CO PATTAS FACTORY</h1><p>Price List 2026 · Select your crackers and send an estimate enquiry</p>
 <div class="tag" id="tg"></div>
 <div class="ct"><a href="tel:+919894813087"><i>📞</i><span><small>ShivaShanker</small><b>98948 13087</b></span></a><a href="tel:+919994458913"><i>📞</i><span><small>NandhaKumar</small><b>99944 58913</b></span></a></div>
-<div class="acts"><a href="tel:+919894813087">📞 Call now</a><a href="https://wa.me/919894813087?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20crackers" target="_blank" rel="noopener">💬 WhatsApp</a><a href="https://maps.app.goo.gl/dS72fQE4fPXmqegj8" target="_blank" rel="noopener">📍 Find us</a><button type="button" id="shr">📤 Share</button></div>
+<div class="acts"><a class="ab c1" href="tel:+919894813087"><i>📞</i><span>Call now</span></a><a class="ab c2" href="https://wa.me/919894813087?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20crackers" target="_blank" rel="noopener"><i>💬</i><span>WhatsApp</span></a><a class="ab c3" href="https://maps.app.goo.gl/dS72fQE4fPXmqegj8" target="_blank" rel="noopener"><i>📍</i><span>Find us</span></a><button type="button" class="ab c4" id="shr"><i>📤</i><span>Share</span></button></div>
 <p class="adr">📍 Near MS Mahal, Opposite to Ayyangar bakery, Kurumbapalayam</p>
 <div class="dy"><i></i><i></i><i></i></div></header>
 <div class="steps"><button type="button" data-go="list"><b>1</b>Choose your crackers</button><button type="button" data-go="est"><b>2</b>Get your estimate</button><button type="button" data-go="call"><b>3</b>We confirm by phone</button></div>
