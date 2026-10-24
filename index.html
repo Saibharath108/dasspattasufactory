@@ -188,14 +188,8 @@ document.getElementById("send").onclick=()=>{const L=lines(),t=upd(),nm=document
  if(!L.length){wn.textContent="Please add at least one item.";return}
  if(t<MIN){wn.textContent=`Minimum order amount is ${inr(MIN)}. Your total is ${inr(t)}.`;return}
  if(!nm||!ph){wn.textContent="Please enter your name and phone number.";return}
- const wrap=(s,w)=>{const o=[];let l="";for(let x of s.split(" ")){while(x.length>w){if(l){o.push(l);l=""}o.push(x.slice(0,w));x=x.slice(w)}if((l+" "+x).trim().length>w){o.push(l);l=x}else l=(l+" "+x).trim()}if(l)o.push(l);return o};
- const NW=17,qs=L.map(r=>r.q+" "+U[r.x.u]),qw=Math.max(3,...qs.map(x=>x.length)),aw=Math.max(6,...L.map(r=>inr(r.a).length),inr(t).length);
- const pad=(x,w)=>x+" ".repeat(Math.max(0,w-x.length)),lpad=(x,w)=>" ".repeat(Math.max(0,w-x.length))+x,ln="-- "+"-".repeat(NW)+" "+"-".repeat(qw)+" "+"-".repeat(aw);
- const rows=[pad("No",2)+" "+pad("Item",NW)+" "+pad("Qty",qw)+" "+lpad("Amount",aw),ln];
- L.forEach((r,i)=>wrap(r.x.nm,NW).forEach((tx,j)=>rows.push(pad(j?"":String(i+1),2)+" "+pad(tx,NW)+" "+pad(j?"":qs[i],qw)+" "+(j?" ".repeat(aw):lpad(inr(r.a),aw)))));
- rows.push(ln,pad("",2)+" "+pad("TOTAL",NW)+" "+pad("",qw)+" "+lpad(inr(t),aw));
- const ad=document.getElementById("ad").value.trim();
- const m="*Estimate Enquiry*\n*Dass & Co Pattas Factory*\n\n*Name:* "+nm+"\n*Phone:* "+ph+(ad?"\n*Address:* "+ad:"")+"\n\n```\n"+rows.join("\n")+"\n```\n*Total: "+inr(t)+"* ("+L.length+(L.length==1?" item)":" items)");
+ const m=`Estimate enquiry – Dass & Co Pattas Factory\nName: ${nm}\nPhone: ${ph}\nAddress: ${document.getElementById("ad").value.trim()}\n\n`+
+  L.map((r,i)=>`${i+1}. ${r.x.nm} × ${r.q} ${U[r.x.u]} = ${inr(r.a)}`).join("\n")+`\n\nTotal: ${inr(t)}`;
  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(m)}`,"_blank")};
 upd();
 const RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
