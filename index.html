@@ -191,13 +191,13 @@ const D=[
 ["Pipes & Fancy",[["Chotta Fancy","B",70],["2\" Pipe","B",150],["3\" Pipe","B",320],["3½\" Pipe","B",415],["5\" Pipe (Double Ball)","B",600],["4\" Pipe","B",520],["5\" Pipe","B",750],["6\" Fancy (7Up / Red Bull / Coca Cola)","B",1200]]],
 ["Repeating Shots",[["7 Shot","B",120],["12 Shot Multi Colour","B",400],["Holy 15 Shot","B",600],["25 Shot","B",420],["30 Shot","B",600]]],
 ["Night Fancy",[["KGF Hand Rocket (288 shots)","C",1200],["60 Shot","B",1100]]],
-["Kids Special",[["Tri Colour Fountain","B",400],["Water Queen","B",135],["Tin Fountain","B",150],["Mini Siren","B",200],["Mega Siren","B",250],["Smoke","B",250],["Disco Shower","B",100],["Butterfly","B",130],["Photo Flash","B",90],["Bat Ball","B",360],["Jee Boom Baa","B",20],["Magic Pops","B",20],["Fun Pops (Small)","B",15],["Fun Pops (Big)","B",25],["Snake Tablet","B",70],["Matches","B",50]]],
+["Kids Special",[["Tri Colour Fountain","B",400],["Water Queen","B",135],["Tin Fountain","B",150],["Mini Siren","B",200],["Mega Siren","B",250],["Smoke","B",250],["Disco Wheel","B",200],["Butterfly","B",130],["Photo Flash","B",90],["Bat Ball","B",360],["Jee Boom Baa","B",20],["Magic Pops","B",20],["Fun Pops (Small)","B",15],["Fun Pops (Big)","B",25],["Snake Tablet","B",70],["Matches","B",50]]],
 ["Caps & Guns",[["Roll Cap","B",null],["Ring Cap","P",null],["Roll Gun (LEO Gun)","C",100],["Ring Gun","C",75]]],
 ["Gift Boxes",[["20 Items Gift Box","B",650],["30 Items Gift Box","B",850],["40 Items Gift Box","B",1100]]],
 ["Bundles",[["Kuruvi Bundle (25 Pkt, 125 pieces)","D",250],["Lakshmi Bundle (10 Pkts)","D",300]]]
 ];
 const E=["✨","🌀","🌸","⭐","💥","🧨","🚀","🎇","🎆","🏮","🎊","🦚","🎈","🔫","🎁","📦"];
-const POP=["Bambaram","Cylinder Bomb","KGF Hand Rocket (288 shots)","Butterfly","Roll Gun (LEO Gun)"],NEW=["Disco Shower","Bullet Bomb"];
+const POP=["Bambaram","Cylinder Bomb","KGF Hand Rocket (288 shots)","Butterfly","Roll Gun (LEO Gun)"],NEW=["Disco Wheel","Bullet Bomb"];
 const TAG=n=>POP.includes(n)?"pop":(NEW.includes(n)||/^6" Fancy/.test(n))?"new":"";
 const BG=n=>{const t=TAG(n);return t?`<span class="bg ${t}">${t=="pop"?"⭐ Popular":"🆕 New"}</span>`:""};
 const qty={},app=document.getElementById("app"),chips=document.getElementById("chips");
